@@ -1,18 +1,22 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
-</head>
-<body>
-
-{{#Todo}}
+{{> layouts/header}}
+<table class="table">
+    <thead>
     <tr>
-        <th>{{id}}</th>
-        <td>{{work}}</td>
-        <td>{{doAt}}</td>
-        <td>{{importance}}</td>
+        <th scope="col">id</th>
+        <th scope="col">work</th>
+        <th scope="col">doAt</th>
+        <th scope="col">importance</th>
     </tr>
-{{/Todo}}
-</body>
-</html>
+    </thead>
+    <tbody>
+    {{#Todo}}
+        <tr>
+            <th>{{id}}</th>
+            <td>{{work}}</td>
+            <td>{{doAt}}</td>
+            <td>{{importance}}</td>
+        </tr>
+    {{/Todo}}
+    </tbody>
+</table>
+{{> layouts/footer}}
