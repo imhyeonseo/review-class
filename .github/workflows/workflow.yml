@@ -51,8 +51,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           script: |
-            docker stop test || true
-            docker rm test || true
+            docker stop void2009/test || true
+            docker rm void2009/test || true
             docker rmi ${{ secrets.DOCKER_USERNAME }}/test:latest || true
             docker pull ${{ secrets.DOCKER_USERNAME }}/test:latest
             docker run -d -p 80:8080 \
